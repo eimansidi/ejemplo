@@ -12,11 +12,10 @@ public class PersonTableUtil {
     // Devuelve una lista observable de personas de ejemplo
     public static ObservableList<Person> getPersonList() {
         return FXCollections.observableArrayList(
-                new Person("Ashwin", "Sharan", LocalDate.of(2012, 10, 11)),
-                new Person("Advik", "Sharan", LocalDate.of(2012, 10, 11)),
-                new Person("Layne", "Estes", LocalDate.of(2011, 12, 16)),
-                new Person("Mason", "Boyd", LocalDate.of(2003, 4, 20)),
-                new Person("Babalu", "Sharan", LocalDate.of(1980, 1, 10))
+                new Person("John", "Doe", LocalDate.of(1990, 1, 1)),
+                new Person("Jane", "Doe", LocalDate.of(1992, 2, 2)),
+                new Person("Mike", "Ross", LocalDate.of(1985, 3, 15)),
+                new Person("Rachel", "Zane", LocalDate.of(1988, 7, 21))
         );
     }
 
