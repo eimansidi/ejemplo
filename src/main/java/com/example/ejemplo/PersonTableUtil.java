@@ -7,40 +7,54 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
+/**
+ * Utilidades para la tabla de personas, proporcionando métodos para crear columnas y listas de datos.
+ */
 public class PersonTableUtil {
 
-    // Devuelve una lista observable de personas de ejemplo
+    /**
+     * Devuelve una lista observable de personas con datos predefinidos.
+     */
     public static ObservableList<Person> getPersonList() {
         return FXCollections.observableArrayList(
-                new Person("John", "Doe", LocalDate.of(1990, 1, 1)),
-                new Person("Jane", "Doe", LocalDate.of(1992, 2, 2)),
-                new Person("Mike", "Ross", LocalDate.of(1985, 3, 15)),
-                new Person("Rachel", "Zane", LocalDate.of(1988, 7, 21))
+                new Person("Ashwin", "Doe", LocalDate.of(2012, 10, 11)),
+                new Person("Advik", "Sharan", LocalDate.of(2012, 10, 11)),
+                new Person("Layne", "Estes", LocalDate.of(2011, 12, 16)),
+                new Person("Mason", "Boyd", LocalDate.of(2003, 4, 20)),
+                new Person("Babalu", "Sharan", LocalDate.of(1980, 1, 10))
         );
     }
 
-    // Devuelve la columna ID
+    /**
+     * Crea y devuelve la columna para el campo 'ID' de la tabla.
+     */
     public static TableColumn<Person, String> getIdColumn() {
         TableColumn<Person, String> idCol = new TableColumn<>("ID");
-        idCol.setCellValueFactory(new PropertyValueFactory<>("id")); // Suponiendo que hay un campo ID, pero si no existe, se puede eliminar
+        idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
         return idCol;
     }
 
-    // Devuelve la columna para el nombre
+    /**
+     * Crea y devuelve la columna para el campo 'First Name' de la tabla.
+     */
     public static TableColumn<Person, String> getFirstNameColumn() {
         TableColumn<Person, String> firstNameCol = new TableColumn<>("First Name");
         firstNameCol.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         return firstNameCol;
     }
 
-    // Devuelve la columna para el apellido
+    /**
+     * Crea y devuelve la columna para el campo 'Last Name' de la tabla.
+     */
     public static TableColumn<Person, String> getLastNameColumn() {
         TableColumn<Person, String> lastNameCol = new TableColumn<>("Last Name");
         lastNameCol.setCellValueFactory(new PropertyValueFactory<>("lastName"));
         return lastNameCol;
     }
 
-    // Devuelve la columna para la fecha de nacimiento
+    /**
+     * Crea y devuelve la columna para el campo 'Birth Date' de la tabla.
+     */
     public static TableColumn<Person, LocalDate> getBirthDateColumn() {
         TableColumn<Person, LocalDate> birthDateCol = new TableColumn<>("Birth Date");
         birthDateCol.setCellValueFactory(new PropertyValueFactory<>("birthDate"));
